@@ -600,9 +600,15 @@ View the facebook [documentation](https://developers.facebook.com/docs/messenger
 
 - Get all tags:
 ```javascript
+// Using a callback
 controller.api.tags.get_all(function (tags) {
    // use tags.data
 });
+
+// Or using promises
+controller.api.tags.get_all()
+  .then(function(tags) { ... })
+  .catch(function(error) { ... })
 ```
 
 - Send a tagged message:
